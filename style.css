@@ -1,6 +1,8 @@
 body .grid {
   display: grid;
+  /* Define two rows by name and give them heights */
   grid-template-rows: [top] 100px [bottom] auto;
+  /* Define four columns by name and give them widths*/
   grid-template-columns: [left] 1fr [middle-left] 4fr [middle-right] 8fr [right] 1fr;
   grid-gap: 15px;
   margin: 15px;
@@ -15,6 +17,7 @@ body .grid img {
   object-fit: cover;
 }
 body .grid .item-1 {
+    /* position this grid item inside the row [top], and from the start of column [left] to the end of column [right] */
     grid-row: top;
     grid-column : left / spanright;
 }
@@ -23,6 +26,7 @@ body .grid .item-2 {
     grid-column : left / middle-left;
 }
 body .grid .item-3 {
+    /* position this grid item inside the row [bottom], and from the start of column [middle-left] to the start of column [middle-right] */
     grid-row: bottom;
     grid-column : middle-left / middle-right;
 }
